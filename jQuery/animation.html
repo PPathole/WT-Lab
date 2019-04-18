@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Animation</title>
+    
+  <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+    
+    <style type="text/css">
+        #container {
+            border: 3px dashed red;
+            margin: 2px;
+            padding: 20px;
+            text-align: center;
+            background-color: gray;
+            font-family: monospace;
+            font-size: 20px;
+        }
+        
+        #box1 {
+            width: 30px;
+            height: 30px;
+            padding: 20px;
+            margin: 2px;
+            border: 2px solid green;
+            background-color: yellow;
+            position: relative;
+        }
+        
+        #box2 {
+            width: 250px;
+            height: 260px;
+            border: 2px solid gray;
+            position: relative;
+            background-color: gray;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+    <h1>jQuery Animation</h1>
+    </div>
+    <br >
+    <br >
+    
+    <button type="button" id="mover">Move right</button>
+    <button type="button" id="movel">Move left</button>
+    
+    <div id="box1"></div>
+    
+    <hr >
+    
+    <button type="button" id="fadein">Fade in</button>
+    <button type="button" id="fadeout">Fade out</button>
+    
+    <div id="box2"></div>
+    
+    <script>
+        
+        $(document).ready(function(){
+            $('#mover').click(function(){
+                $('#box1').animate({
+                    right: -500
+                });
+            });
+            
+            $('#movel').click(function(){
+                $('#box1').animate({
+                    
+                    left: 0
+                });
+            });
+            
+            $('#fadein').click(function(){
+                $('#box2').fadeIn(3000);
+            });
+            
+            $('#fadeout').click(function(){
+                $('#box2').fadeOut(1000);
+            });
+        });
+        
+    </script>
+    
+   
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculate Marks</title>
+        
+        <style type="text/css">
+            #container{
+                text-align: center;
+                background-color: antiquewhite;
+                font-family: sans-serif;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="container">
+        <h2>Javascript for calculating Total and Percentage</h2>
+        <p>ESIOT:
+            <input id="s1"></p><br>
+        <p>WT:
+            <input id="s2"></p><br>
+        <p>SMD:
+            <input id="s3"></p><br>
+        <p>SPOS:
+            <input id="s4"></p><br>
+        <p>DAA:
+            <input id="s5"></p><br>
+        <button type="button" onclick="myFunction()">Submit</button>
+        <p id="demo"></p>
+        <p id="sum"></p>
+        <p id="per"></p>
+            
+        </div>
+        
+        
+        
+        <script type="text/javascript">
+            function myFunction() {
+            var x, text,per;
+            a = parseInt(document.getElementById("s1").value);
+            b =parseInt( document.getElementById("s2").value);
+            c =parseInt( document.getElementById("s3").value);
+            d =parseInt( document.getElementById("s4").value);
+            e =parseInt( document.getElementById("s5").value);
+            
+             if ( isNaN(a) || a < 1 || a > 100 || isNaN(b) || b < 1 || b > 100|| isNaN(c) || c < 1 || c > 100|| isNaN(d) || d < 1 || d > 100|| isNaN(e) || e < 1 || e > 100) {
+                   alert("Invalid Input");
+              } else {
+               sum = a+b+c+d+e;
+                per = (sum/500)*100;
+                 text="";
+                 document.getElementById("demo").innerHTML = text;
+                  document.getElementById("sum").innerHTML = "Total: " + sum;
+                    document.getElementById("per").innerHTML = "Percentage: " +per+"%";
+  }
+  
+}
+</script>
+</body>
+</html> 

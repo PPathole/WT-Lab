@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculator in jQuery</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+    
+    <style type="text/css">
+        
+        #container {
+            text-align: center;
+            font-family: sans-serif;
+        }
+        
+        
+    </style>
+    
+</head>
+    
+    
+<body>
+    
+    <div id="container">
+        
+        <h1>Calculator</h1>
+        
+   Enter number 1: <input type="number" id="num1"><br >
+    <br >
+    Enter number 2: <input type="number" id="num2"><br >
+    <br >
+    <button type="button" id="add">+</button><br >
+    <br >
+    <button type="button" id="subt">-</button><br >
+    <br >
+    <button type="button" id="mult">*</button><br >
+    <br >
+    <button type="button" id="div">/</button><br >
+    <br >
+    Result: <input type="number" id="result">  
+    </div> 
+    
+    <script language="javascript">
+        
+        $(document).ready(function(){
+            
+            $('#add').click(function(){
+                var x = $('#num1').val();
+                var y = $('#num2').val();
+                
+                var ans = parseInt(x) + parseInt(y);
+                
+                $('#result').val(ans);
+            });
+            
+            $('#subt').click(function(){
+                var x = $('#num1').val();
+                var y = $('#num2').val();
+                
+                var ans = parseInt(x) - parseInt(y);
+                
+                $('#result').val(ans);
+            });
+            
+            $('#mult').click(function(){
+                var x = $('#num1').val();
+                var y = $('#num2').val();
+                
+                var ans = parseInt(x) * parseInt(y);
+                
+                $('#result').val(ans);
+            });
+            
+            $('#div').click(function(){
+                var x = $('#num1').val();
+                var y = $('#num2').val();
+                
+                if(y == 0){
+                   alert("Divide by zero error");
+                   }else{
+                       var ans = parseInt(x) / parseInt(y);
+                       
+                       $('#result').val(ans);
+                   }
+            });
+            
+            
+        });
+        
+    </script>
+    
+</body>    
+</html>

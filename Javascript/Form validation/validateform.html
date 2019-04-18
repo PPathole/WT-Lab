@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+    
+    <style type="text/css">
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center">Form Validation using Javascript</h1>
+    <div id="container">
+    <form id="validform" name="validateform">
+        
+        Student Roll no: <input type="number" id="rno"><p id="rollno" style="color: red"></p><br >
+        <br >
+        Student Name: <input type="text" id="name"><p id="fname" style="color: red"></p><br >
+        <br >
+        Year of Engineering (FE/SE/TE/BE): <input type="text" id="year"><p id="yoe" style="color: red"></p><br >
+        <br >
+        Branch of Engineering: <input type="text" id="branch"><p id="boe" style="color: red"></p><br >
+        <br >
+        Mobile number: <input type="number" id="mobile"><p id="mno" style="color: red"></p><br >
+        <br >
+        Email ID: <input type="email" id="email"><p id="emailid" style="color: red"></p><br >
+        <br >
+        Was this assignment Succesful?: <input type="radio" id="ans1" checked>Yes<input type="radio" id="ans2">No<br >
+        
+        <button type="button" id="submit" onclick="return validateForm()">Submit</button>
+        
+    </form>
+    </div>
+    
+    <script type="text/javascript">
+        
+        function validateForm(){
+            var rno = document.getElementById("rno").value;
+            var name = document.getElementById("name").value;
+            var yoe = document.getElementById("year").value;
+            var branch = document.getElementById("branch").value;
+            var mobileno = document.getElementById("mobile").value;
+            var email = document.getElementById("email").value;
+            
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            
+            
+            
+            if(rno == "" || isNaN(rno)){
+               document.getElementById("rollno").innerHTML = "Enter valid roll no!"
+               }
+            
+            if(name == ""){
+               document.getElementById("fname").innerHTML = "Name is mandatory!"
+               }
+            
+            if(yoe == "" || yoe!="FE" || yoe!="SE"|| yoe!= "TE"|| yoe!="BE"){
+               document.getElementById("yoe").innerHTML = "Only options include FE,SE,TE,BE"
+               }
+            
+            if(branch == ""){
+               document.getElementById("boe").innerHTML = "Branch is mandatory!"
+               }
+            
+            if(mobileno == "" || isNaN(mobileno) || mobileno.length > 10|| mobileno.length<10){
+               document.getElementById("mno").innerHTML = "Mobile number should be of 10 digits!"
+               }
+            
+            if(email == ""){
+               document.getElementById("emailid").innerHTML = "Email Address is required!"
+               }
+            
+            if(reg.test(email) == false){
+               alert("Email should contain @ and .com");
+               }
+            
+            else{
+                alert("Form submitted!");
+            }
+        
+        }
+        
+    </script>
+</body>
+</html>
