@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Angular Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+    <script type="text/javascript">
+        var app = angular.module("calc", []);
+        app.controller("calcCtrl", function($scope){
+            
+            $scope.add = function(){
+                var a = Number($scope.num1);
+                var b = Number($scope.num2);
+                
+                $scope.result = a + b;
+            }
+            
+            $scope.sub = function(){
+                var a = Number($scope.num1);
+                var b = Number($scope.num2);
+                
+                $scope.result = a - b;
+            }
+            
+            $scope.mul = function(){
+                var a = Number($scope.num1);
+                var b = Number($scope.num2);
+                
+                $scope.result = a * b;
+            }
+            
+            $scope.div = function(){
+                var a = Number($scope.num1);
+                var b = Number($scope.num2);
+                
+                $scope.result = a / b;
+            }
+            
+            
+        });
+                       
+        
+    </script>
+    
+    <style type="text/css">
+        body {
+            text-align: center;
+            background-color: aquamarine;
+            border: 5px solid red;
+            font-family: monospace;
+        }
+    </style>
+    
+    
+</head>
+
+<body ng-app="calc" ng-controller="calcCtrl">
+    <div class="container">
+        
+        <h1>AngularJS Calculator</h1>
+    </div>
+    
+    <div>
+        <input type="text" ng-model="num1" placeholder="number1"><br >
+        <br >
+        <input type="text" ng-model="num2" placeholder="number2"><br >
+        <br >
+    </div>
+
+    
+    <div>
+        <button type="button" ng-click="add()">+</button>
+    <button type="button" ng-click="sub()">-</button><br >
+        <br >
+    <button type="button" ng-click="mul()">*</button>
+    <button type="button" ng-click="div()">/</button>
+        
+    </div>
+    
+    <div>
+        <input type="text" ng-model="result" placeholder="result">
+    </div>
+    
+    
+
+<body>
+
+</html>
