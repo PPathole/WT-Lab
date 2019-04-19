@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Rule.css"?>
+
+<books>
+    <heading>BOOKS ASSIGNMENT</heading>
+    
+    <book>
+        <title>Title: Mastering Web Technology</title>
+        <author>Author: Pranay Pathole</author>
+        <publish>Publisher: Musk Media</publish>
+        <edition>Edition: 1</edition>
+        <price>Price: 450</price>
+        
+    </book>
+        
+    
+    <book>
+       <title>Title: Git VCS</title>
+        <author>Author: Nate Friedman</author>
+        <publish>Publish: GitHub Inc.</publish>
+    <edition>Edition: 5</edition>
+    <price>Price: 700</price>
+        
+    </book>
+        
+    
+    <book>
+        <title>Title: Microservices: From Theory to Practice</title>
+        <author>Author: Crook Mcmister</author>
+        <publish>Publish: IBM</publish>
+        <edition>Edition: 10</edition>
+        <price>Price: 400</price>
+        
+        
+    </book>
+    
+    <book>
+        <title>Title: Database management Systems</title>
+        <author>Author: Jonathan Morrison</author>
+        <publish>Publish: TLDToday</publish>
+        <edition>Edition: 3</edition>
+        <price>Price: 450</price>
+        
+    </book>
+    
+    <book>
+        <title>Title: Video Nerd</title>
+        <author>Author: Marques Brownlee</author>
+        <publish>Publish: MKBHD</publish>
+        <edition>Edition: 2</edition>
+        <price>Price: 750</price>
+        
+    </book>
+    
+    
+</books>
