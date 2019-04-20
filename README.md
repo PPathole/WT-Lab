@@ -1,5 +1,5 @@
 # WT-Lab
-All the codes of Web technology lab
+All the codes of Web technology lab for _SPPU_
 
 ## HTML *and* CSS
 1. Image Gallery
