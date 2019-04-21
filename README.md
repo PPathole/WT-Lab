@@ -30,3 +30,6 @@ All the codes of Web technology lab for _SPPU_
 
 ## Servlet
 1. *Yet another* calculator using Servlets in Netbeans 
+
+## EnterpriseJavaBeans (EJB)
+1. Find out `Square`, `Cube`, *and* `Square root` of a number using EJB and Netbeans IDE
